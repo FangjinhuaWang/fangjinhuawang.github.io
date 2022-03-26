@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://fangjinhuawang.github.io/publication-type/3/</loc>
+    <loc>https://fangjinhuawang.github.io/publication-type/1/</loc>
     <lastmod>2021-12-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://fangjinhuawang.github.io/</loc>
@@ -22,9 +22,6 @@
   </url><url>
     <loc>https://fangjinhuawang.github.io/publication/tvcg2021_self_calibrated_wearable/</loc>
     <lastmod>2021-11-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://fangjinhuawang.github.io/publication-type/1/</loc>
-    <lastmod>2020-12-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://fangjinhuawang.github.io/publication/patchmatchnet/</loc>
     <lastmod>2020-12-03T00:00:00+00:00</lastmod>

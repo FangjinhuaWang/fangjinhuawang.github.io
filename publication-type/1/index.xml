@@ -5,12 +5,20 @@
     <link>https://fangjinhuawang.github.io/publication-type/1/</link>
       <atom:link href="https://fangjinhuawang.github.io/publication-type/1/index.xml" rel="self" type="application/rss+xml" />
     <description>1</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 03 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 09 Dec 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://fangjinhuawang.github.io/images/icon_hub4c6cca0a91487daf83e6be395fe7f85_42379_512x512_fill_lanczos_center_2.png</url>
       <title>1</title>
       <link>https://fangjinhuawang.github.io/publication-type/1/</link>
     </image>
+    
+    <item>
+      <title>IterMVS: Iterative Probability Estimation for Efficient Multi-View Stereo</title>
+      <link>https://fangjinhuawang.github.io/publication/itermvs/</link>
+      <pubDate>Thu, 09 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://fangjinhuawang.github.io/publication/itermvs/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>PatchmatchNet: Learned Multi-View Patchmatch Stereo</title>
