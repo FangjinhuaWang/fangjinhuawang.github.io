@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="VolRecon: Volume Rendering of Signed Ray Distance Functions for Generalizable Multi-View Reconstruction">
+  <meta name="keywords" content="VolRecon, volume rendering, multi-view reconstruction">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VolRecon: Volume Rendering of Signed Ray Distance Functions for Generalizable Multi-View Reconstruction</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://fangjinhuawang.github.io/">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">VolRecon: Volume Rendering of Signed Ray Distance Functions for Generalizable Multi-View Reconstruction</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://people.epfl.ch/yufan.ren?lang=en">Yufan Ren</a><sup>1 *</sup>,</span>
+            <span class="author-block">
+              <a href="https://fangjinhuawang.github.io/">Fangjinhua Wang</a><sup>2 *</sup>,</span>
+            <span class="author-block">
+              <a href="https://people.epfl.ch/tong.zhang?lang=en">Tong Zhang</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="http://cvg.ethz.ch/people/faculty/">Marc Pollefeys</a><sup>2,3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://people.epfl.ch/sabine.susstrunk">Sabine Süsstrunk</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="column is-full_width">
+            <h2 class="is-size-6">* Equal Contribution</h2>
+            <!-- <h2 class="is-size-6">(* equal contribution)  (<span>&#8224;</span> corresponding author)</h2> -->
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>EPFL</span>&nbsp;&nbsp;
+            <span class="author-block"><sup>2</sup>ETH Zurich</span>&nbsp;&nbsp;
+            <span class="author-block"><sup>3</sup>Microsoft Mixed Reality & AI Zurich Lab</span>&nbsp;&nbsp;
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+             
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/FangjinhuaWang/VolRecon"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (Coming Soon)</span>
+                  </a>
+              </span>
+              
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full_width">
+        <h2 class="title is-3">Abstract</h2>
+        <img src="static/images/pipeline.jpg" class="center"/>
+        <div class="content has-text-justified">
+          <p>
+            With the success of neural volume rendering in novel view synthesis, neural implicit reconstruction with volume rendering has become popular. However, most methods optimize per-scene functions and are unable to generalize to novel scenes. We introduce VolRecon, a generalizable implicit reconstruction method with Signed Ray Distance Function (SRDF). To reconstruct with fine details and little noise, we combine projection features, aggregated from multi-view features with a view transformer, and volume features interpolated from a coarse global feature volume. A ray transformer computes SRDF values of all the samples along a ray to estimate the surface location, which are used for volume rendering of color and depth. Extensive experiments on DTU and ETH3D demonstrate the effectiveness and generalization ability of our method. On DTU, our method outperforms SparseNeuS by about 30% in sparse view reconstruction and achieves comparable quality as MVSNet in full view reconstruction. Besides, our method shows good generalization ability on the large-scale ETH3D benchmark. 
+          </p>
+         
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full_width">
+        <h2 class="title is-3">Reconstruction Results</h2>
+        <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/video.mp4"
+                    type="video/mp4">
+          </video>
+        
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{ren2022volrecon,
+  author    = {Yufan Ren, Fangjinhua Wang, Tong Zhang, Marc Pollefeys, Sabine Süsstrunk},
+  title     = {VolRecon: Volume Rendering of Signed Ray Distance Functions for Generalizable Multi-View Reconstruction},
+  journal   = {arXiv},
+  year      = {2022},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This webpage template is from <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
