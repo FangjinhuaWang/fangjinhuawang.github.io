@@ -122,7 +122,7 @@
              
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/FangjinhuaWang/VolRecon"
+                <a href="https://github.com/IVRL/VolRecon"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -152,7 +152,7 @@
         <img src="static/images/pipeline.jpg" class="center"/>
         <div class="content has-text-justified">
           <p>
-            With the success of neural volume rendering in novel view synthesis, neural implicit reconstruction with volume rendering has become popular. However, most methods optimize per-scene functions and are unable to generalize to novel scenes. We introduce VolRecon, a generalizable implicit reconstruction method with Signed Ray Distance Function (SRDF). To reconstruct with fine details and little noise, we combine projection features, aggregated from multi-view features with a view transformer, and volume features interpolated from a coarse global feature volume. A ray transformer computes SRDF values of all the samples along a ray to estimate the surface location, which are used for volume rendering of color and depth. Extensive experiments on DTU and ETH3D demonstrate the effectiveness and generalization ability of our method. On DTU, our method outperforms SparseNeuS by about 30% in sparse view reconstruction and achieves comparable quality as MVSNet in full view reconstruction. Besides, our method shows good generalization ability on the large-scale ETH3D benchmark. 
+            The success of the Neural Radiance Fields (NeRF) in novel view synthesis has inspired researchers to propose neural implicit scene reconstruction. However, most existing neural implicit reconstruction methods optimize per-scene parameters and therefore lack generalizability to new scenes. We introduce VolRecon, a novel generalizable implicit reconstruction method with Signed Ray Distance Function (SRDF). To reconstruct the scene with fine details and little noise, VolRecon combines projection features aggregated from multi-view features, and volume features interpolated from a coarse global feature volume. Using a ray transformer, we compute SRDF values of sampled points on a ray and then render color and depth. On DTU dataset, VolRecon outperforms SparseNeuS by about 30% in sparse view reconstruction and achieves comparable accuracy as MVSNet in full view reconstruction. Furthermore, our approach exhibits good generalization performance on the large-scale ETH3D benchmark.
           </p>
          
         </div>
