@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="description"
-        content="VolRecon: Volume Rendering of Signed Ray Distance Functions for Generalizable Multi-View Reconstruction">
-  <meta name="keywords" content="VolRecon, volume rendering, multi-view reconstruction">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>VolRecon: Volume Rendering of Signed Ray Distance Functions for Generalizable Multi-View Reconstruction</title>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description"
+      content="VolRecon: Volume Rendering of Signed Ray Distance Functions for Generalizable Multi-View Reconstruction">
+    <meta name="keywords"
+      content="VolRecon, volume rendering, multi-view reconstruction">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VolRecon: Volume Rendering of Signed Ray Distance Functions for
+      Generalizable Multi-View Reconstruction</title>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
-  <script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+    <script>
     window.dataLayer = window.dataLayer || [];
 
     function gtag() {
@@ -22,193 +24,359 @@
     gtag('config', 'G-PYVRSFMDRL');
   </script>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+      rel="stylesheet">
 
-  <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
-  <script src="./static/js/index.js"></script>
-</head>
-<body>
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+    <script type="module"
+      src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+  </head>
+  <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://fangjinhuawang.github.io/">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a>
-
-      
-    </div>
-
-  </div>
-</nav>
-
-
-<section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">VolRecon: Volume Rendering of Signed Ray Distance Functions for Generalizable Multi-View Reconstruction</h1>
-          <h2 class="is-size-2">CVPR 2023</h2>
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="https://people.epfl.ch/yufan.ren?lang=en">Yufan Ren</a><sup>1 *</sup>,</span>
-            <span class="author-block">
-              <a href="https://fangjinhuawang.github.io/">Fangjinhua Wang</a><sup>2 *</sup>,</span>
-            <span class="author-block">
-              <a href="https://people.epfl.ch/tong.zhang?lang=en">Tong Zhang</a><sup>1</sup>,
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a role="button" class="navbar-burger" aria-label="menu"
+          aria-expanded="false">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div class="navbar-menu">
+        <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+          <a class="navbar-item" href="https://fangjinhuawang.github.io/">
+            <span class="icon">
+              <i class="fas fa-home"></i>
             </span>
-            <span class="author-block">
-              <a href="http://cvg.ethz.ch/people/faculty/">Marc Pollefeys</a><sup>2,3</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://people.epfl.ch/sabine.susstrunk">Sabine Süsstrunk</a><sup>1</sup>
-            </span>
-          </div>
+          </a>
 
-          <div class="column is-full_width">
-            <h2 class="is-size-6">* Equal Contribution</h2>
-            <!-- <h2 class="is-size-6">(* equal contribution)  (<span>&#8224;</span> corresponding author)</h2> -->
-          </div>
+        </div>
 
-          <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>EPFL</span>&nbsp;&nbsp;
-            <span class="author-block"><sup>2</sup>ETH Zurich</span>&nbsp;&nbsp;
-            <span class="author-block"><sup>3</sup>Microsoft Mixed Reality & AI Zurich Lab</span>&nbsp;&nbsp;
-          </div>
+      </div>
+    </nav>
 
-          <div class="column has-text-centered">
-            <div class="publication-links">
-              <!-- PDF Link. -->
-              <span class="link-block">
-                <a href="https://arxiv.org/abs/2212.08067"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-1 publication-title">VolRecon: Volume
+                Rendering of Signed Ray Distance Functions for Generalizable
+                Multi-View Reconstruction</h1>
+              <h2 class="is-size-2">CVPR 2023</h2>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">
+                  <a href="https://people.epfl.ch/yufan.ren?lang=en">Yufan Ren</a><sup>1
+                    *</sup>,</span>
+                <span class="author-block">
+                  <a href="https://fangjinhuawang.github.io/">Fangjinhua Wang</a><sup>2
+                    *</sup>,</span>
+                <span class="author-block">
+                  <a href="https://people.epfl.ch/tong.zhang?lang=en">Tong Zhang</a><sup>1</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="http://cvg.ethz.ch/people/faculty/">Marc Pollefeys</a><sup>2,3</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://people.epfl.ch/sabine.susstrunk">Sabine
+                    Süsstrunk</a><sup>1</sup>
+                </span>
+              </div>
+
+              <div class="column is-full_width">
+                <h2 class="is-size-6">* Equal Contribution</h2>
+                <!-- <h2 class="is-size-6">(* equal contribution)  (<span>&#8224;</span> corresponding author)</h2> -->
+              </div>
+
+              <div class="is-size-5 publication-authors">
+                <span class="author-block"><sup>1</sup>EPFL</span>&nbsp;&nbsp;
+                <span class="author-block"><sup>2</sup>ETH Zurich</span>&nbsp;&nbsp;
+                <span class="author-block"><sup>3</sup>Microsoft Mixed Reality &
+                  AI Zurich Lab</span>&nbsp;&nbsp;
+              </div>
+
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <!-- PDF Link. -->
+                  <span class="link-block">
+                    <a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Ren_VolRecon_Volume_Rendering_of_Signed_Ray_Distance_Functions_for_Generalizable_CVPR_2023_paper.pdf"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Paper</span>
+                    </a>
                   </span>
-                  <span>Paper</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="https://arxiv.org/abs/2212.08067"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
+                  <span class="link-block">
+                    <a href="https://arxiv.org/abs/2212.08067"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                      </span>
+                      <span>arXiv</span>
+                    </a>
                   </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-             
-              <!-- Code Link. -->
-              <span class="link-block">
-                <a href="https://github.com/IVRL/VolRecon"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
+
+                  <!-- Code Link. -->
+                  <span class="link-block">
+                    <a href="https://github.com/IVRL/VolRecon"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Code</span>
+                    </a>
                   </span>
-                  <span>Code</span>
-                  </a>
-              </span>
-              
+
+                </div>
+
+              </div>
             </div>
-
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
+    <section class="section">
+      <div class="container is-max-desktop">
+        <!-- Abstract. -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full_width">
+            <h2 class="title is-3">Abstract</h2>
+            <img src="static/images/pipeline.png" class="center" />
+            <div class="content has-text-justified">
+              <p>
+                The success of the Neural Radiance Fields (NeRF) in novel view
+                synthesis has inspired researchers to propose neural implicit
+                scene reconstruction. However, most existing neural implicit
+                reconstruction methods optimize per-scene parameters and
+                therefore lack generalizability to new scenes. We introduce
+                VolRecon, a novel generalizable implicit reconstruction method
+                with Signed Ray Distance Function (SRDF). To reconstruct the
+                scene with fine details and little noise, VolRecon combines
+                projection features aggregated from multi-view features, and
+                volume features interpolated from a coarse global feature
+                volume. Using a ray transformer, we compute SRDF values of
+                sampled points on a ray and then render color and depth. On DTU
+                dataset, VolRecon outperforms SparseNeuS by about 30% in sparse
+                view reconstruction and achieves comparable accuracy as MVSNet
+                in full view reconstruction. Furthermore, our approach exhibits
+                good generalization performance on the large-scale ETH3D
+                benchmark.
+              </p>
 
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-full_width">
-        <h2 class="title is-3">Abstract</h2>
-        <img src="static/images/pipeline.jpg" class="center"/>
-        <div class="content has-text-justified">
-          <p>
-            The success of the Neural Radiance Fields (NeRF) in novel view synthesis has inspired researchers to propose neural implicit scene reconstruction. However, most existing neural implicit reconstruction methods optimize per-scene parameters and therefore lack generalizability to new scenes. We introduce VolRecon, a novel generalizable implicit reconstruction method with Signed Ray Distance Function (SRDF). To reconstruct the scene with fine details and little noise, VolRecon combines projection features aggregated from multi-view features, and volume features interpolated from a coarse global feature volume. Using a ray transformer, we compute SRDF values of sampled points on a ray and then render color and depth. On DTU dataset, VolRecon outperforms SparseNeuS by about 30% in sparse view reconstruction and achieves comparable accuracy as MVSNet in full view reconstruction. Furthermore, our approach exhibits good generalization performance on the large-scale ETH3D benchmark.
-          </p>
-         
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <!--/ Abstract. -->
+        <!--/ Abstract. -->
 
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-full_width">
-        <h2 class="title is-3">Reconstruction Results</h2>
-        <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/video.mp4"
-                    type="video/mp4">
-          </video>
+        <!-- Paper video. -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full_width">
+            <h3 class="title is-3">Reconstruction Results</h2>
+            <video id="dollyzoom" autoplay controls muted loop playsinline
+              height="100%">
+              <source src="./static/videos/video.mp4"
+                type="video/mp4">
+            </video>
+          </div>
+        </div>
         
+
+        <!--/ Paper video. -->
+        <div class="columns is-centered has-text-centered">
+          <h3 class="title is-3">More results</h2>
+        </div>
+        <div class="tabs is-toggle is-fullwidth">
+          <ul id ="scan_selection">
+          </ul>
+        </div>
+        
+      <div id = "scan_content" class="has-text-centered">
+        <!--/ Scan 24 -->
+        <div class="tabcontent" style="display: block;" scan="24">
+          <!-- source views. -->
+          <h2 class="title is-5">Source views</h2>
+          <div class="columns is-centered has-text-centered" width="50%" >
+            <div class="column" width="20%"></div>
+            <div class="column">
+              <img src="static/images/source_views/24/1.png" />
+            </div>
+            <div class="column">
+              <img src="static/images/source_views/24/2.png" />
+            </div>
+            <div class="column">
+              <img src="static/images/source_views/24/3.png" />
+            </div>
+          </div>
+                    
+          <!-- source views. -->
+          <!-- 3D model. -->
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-full_width">
+              <h2 class="title is-3">Reconstructed 3D model</h2>
+              <model-viewer id="transform" orientation="20deg 0 0" shadow-intensity="1" camera-controls touch-action="pan-y" ar
+                src="https://raw.githubusercontent.com/khalilacheche/VolReconIBRN/main/meshes/69_c.glb" alt="A 3D model of an astronaut">
+                <div class="controls">
+                  <div>Roll: <input id="roll" value="20" size="3" class="number"> degrees</div>
+                  <div>Pitch: <input id="pitch" value="0" size="3" class="number"> degrees</div>
+                  <div>Yaw: <input id="yaw" value="0" size="3" class="number"> degrees</div>
+                  <div>
+                    Scale: X: <input id="x" value="1" size="3" class="number">,
+                    Y: <input id="y" value="1" size="3" class="number">,
+                    Z: <input id="z" value="1" size="3" class="number">
+                  </div>
+                  <button id="frame">Update Framing</button>
+                </div>
+              </model-viewer>
+              <script>
+                const modelViewerTransform = document.querySelector("model-viewer#transform");
+                const roll = document.querySelector('#roll');
+                const pitch = document.querySelector('#pitch');
+                const yaw = document.querySelector('#yaw');
+                const x = document.querySelector('#x');
+                const y = document.querySelector('#y');
+                const z = document.querySelector('#z');
+                const frame = document.querySelector('#frame');
+
+                frame.addEventListener('click', () => {
+                  modelViewerTransform.updateFraming();
+                });
+
+                const updateOrientation = () => {
+                  modelViewerTransform.orientation = `${roll.value}deg ${pitch.value}deg ${yaw.value}deg`;
+                };
+
+                const updateScale = () => {
+                  modelViewerTransform.scale = `${x.value} ${y.value} ${z.value}`;
+                };
+
+                roll.addEventListener('input', () => {
+                  updateOrientation();
+                });
+                pitch.addEventListener('input', () => {
+                  updateOrientation();
+                });
+                yaw.addEventListener('input', () => {
+                  updateOrientation();
+                });
+                x.addEventListener('input', () => {
+                  updateScale();
+                });
+                y.addEventListener('input', () => {
+                  updateScale();
+                });
+                z.addEventListener('input', () => {
+                  updateScale();
+                });
+              </script>
+              <script>
+                const modelViewerParameters = document.querySelector("model-viewer#sphere");
+
+                modelViewerParameters.addEventListener("load", (ev) => {
+
+                  let material = modelViewerParameters.model.materials[0];
+                  console.log(material);  
+
+                  let metalnessDisplay = document.querySelector("#metalness-value");
+                  let roughnessDisplay = document.querySelector("#roughness-value");
+
+                  metalnessDisplay.textContent = material.pbrMetallicRoughness.metallicFactor;
+                  roughnessDisplay.textContent = material.pbrMetallicRoughness.roughnessFactor;
+
+                  // Defaults to gold
+                  //material.pbrMetallicRoughness.setBaseColorFactor([0.7294, 0.5333, 0.0392]);
+
+                  document.querySelector('#metalness').addEventListener('input', (event) => {
+                    material.pbrMetallicRoughness.setMetallicFactor(event.target.value);
+                    metalnessDisplay.textContent = event.target.value;
+                    console.log(event.target.value);
+                  });
+
+                  document.querySelector('#roughness').addEventListener('input', (event) => {
+                    material.pbrMetallicRoughness.setRoughnessFactor(event.target.value);
+                    roughnessDisplay.textContent = event.target.value;
+                  });
+                });
+              </script>
+            </div>
+          </div>
+          <!--/ 3D model. -->
+          <!--/ Renderings -->
+          <h2 class="title is-3"></h2>
+          <table>
+            <tbody>
+              <tr>
+                <td align="left" valign="top" width="50%">
+                  <video class="video" preload="auto" id="water5" loop="" playsinline="" autoplay="" muted=""
+                    src="static/videos/65.mp4" onplay="resizeAndPlay(this)" style="height: 100px;">
+                  </video>
+        
+                  <canvas class="videoMerge" id="water5Merge"></canvas>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!--/ Renderings -->
+        </div>
+        <!--/ Scan 24 -->
       </div>
+      </div>
+      
+    </section>
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content has-text-centered">
+      <!-- <h2 class="title">Poster</h2> -->
+      <h2 class="title is-3" >Poster</h2>
+      <img src="static/images/poster.png" class="center" />
+      </iframe>
     </div>
-    <!--/ Paper video. -->
-  </div>
-</section>
-
-
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@article{ren2022volrecon,
+    
+  </section>
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <h2 class="title">BibTeX</h2>
+        <pre><code>@article{ren2022volrecon,
   author    = {Yufan Ren, Fangjinhua Wang, Tong Zhang, Marc Pollefeys, Sabine Süsstrunk},
   title     = {VolRecon: Volume Rendering of Signed Ray Distance Functions for Generalizable Multi-View Reconstruction},
   journal   = {arXiv},
   year      = {2022},
 }</code></pre>
-  </div>
-</section>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
 
-
-<footer class="footer">
-  <div class="container">
-
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-          <p>
-            This webpage template is from <a
-              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>. 
-          </p>
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="content">
+              <p>
+                This website is licensed under a <a rel="license"
+                  href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                  Commons Attribution-ShareAlike 4.0 International License</a>.
+              </p>
+              <p>
+                This webpage template is from <a
+                  href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</footer>
-
-</body>
+    </footer>
+  </body>
 </html>
