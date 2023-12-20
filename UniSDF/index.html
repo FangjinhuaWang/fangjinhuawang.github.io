@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> 
+  <title>UniSDF</title>
+  <style>
+    *{
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <br>
+    <div style="text-align: center;">  
+      <h1>UniSDF</h1>
+      <h3>Unifying Neural Representations for High-Fidelity 3D Reconstruction of Complex Scenes with Reflections</h3>
+      <div style="margin-top: 15px;">
+        <span style="margin-right: 15px; font-size: 1.3em;"><a href="https://fangjinhuawang.github.io/" target="_blank">Fangjinhua Wang<sup>1,2</sup></a></span>
+        <span style="margin-right: 15px; font-size: 1.3em;"><a href="https://www.lix.polytechnique.fr/Labo/Marie-Julie.RAKOTOSAONA/" target="_blank">Marie-Julie Rakotosaona<sup>2</sup></a></span>
+        <span style="margin-right: 15px; font-size: 1.3em;"><a href="https://m-niemeyer.github.io/" target="_blank">Michael Niemeyer<sup>2</sup></a></span>
+        <span style="margin-right: 15px; font-size: 1.3em;"><a href="https://szeliski.org/" target="_blank">Richard Szeliski<sup>2</sup></a></span>
+      </div>
+      <div>
+        <span style="margin-right: 15px; font-size: 1.3em;"><a href="https://scholar.google.com/citations?user=YYH0BjEAAAAJ&hl=en" target="_blank">Marc Pollefeys<sup>1</sup></a></span>
+        <span style="font-size: 1.3em;"><a href="https://federicotombari.github.io/" target="_blank">Federico Tombari<sup>2</sup></a></span>
+      </div>
+      <div style="margin-top: 15px;">
+        <span style="margin-right: 20px; font-size: 1.2em;"><sup>1</sup>ETH Zürich</span>
+        <span style="font-size: 1.2em;"><sup>2</sup>Google</span>
+      </div>
+      <div class="text-center" style="font-size: 1.5em; margin-top: 25px;">
+        <a class="btn btn-primary btn-lg" target="_blank"
+          href="https://unisdf.github.io" role="button"
+          style="margin-right: 10px; margin-bottom: 10px;">Paper</a>
+        <a class="btn btn-primary btn-lg" target="_blank"
+          href="https://unisdf.github.io" role="button"
+          style="margin-right: 10px;  margin-bottom: 10px;">Arxiv</a>
+      </div>
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="embed-responsive embed-responsive-21by9">
+          <video controls loop muted autoplay class="embed-responsive-item">
+            <source src="gfx/ours/gardenspheres.mp4" type="video/mp4">
+          </video>
+        </div>
+        <p class="text-center" style="font-size: 1.5em;">
+          <span style="font-weight: bold;">UniSDF</span> enables high-quality 3D reconstruction of complex scenes with reflections
+        </p>
+      </div>
+    </div>
+    <div style="margin-top: 30px;">
+      <h2 class="text-center">
+        Abstract
+      </h2>
+      <p style="font-style: italic; margin-bottom: 5px;" align="left">
+      Neural 3D scene representations have shown great potential for 3D reconstruction from 2D images. However, reconstructing real-world captures of complex scenes still remains a challenge. Existing generic 3D reconstruction methods often struggle to represent fine geometric details and do not adequately model reflective surfaces of large-scale scenes. Techniques that explicitly focus on reflective surfaces can model complex and detailed reflections by exploiting better reflection parameterizations. However, we observe that these methods are often not robust in real unbounded scenarios where non-reflective as well as reflective components are present. In this work, we propose UniSDF, a general purpose 3D reconstruction method that can reconstruct large complex scenes with reflections. We investigate both view-based as well as reflection-based color prediction parameterization techniques and find that explicitly blending these representations in 3D space enables reconstruction of surfaces that are more geometrically accurate, especially for reflective surfaces. We further combine this representation with a multi-resolution grid backbone that is trained in a coarse-to-fine manner, enabling faster reconstructions than prior methods. Extensive experiments on object-level datasets DTU, Shiny Blender as well as unbounded datasets Mip-NeRF 360 and Ref-NeRF real demonstrate that our method is able to robustly reconstruct complex large-scale scenes with fine details and reflective surfaces.
+      </p>
+      <p style="font-size: 1.2em; margin-top: 0px;" align="left">
+        <span style="font-weight: bold;">TL;DR:</span> We unify different radiance field parameterizations and combine it with a multi-resolution grid backbone to achieve high-quality reconstruction of complex scenes with reflections.
+      </p>
+    </div>
+    <div class="row">
+      <h2>Baseline Comparison</h2>
+      <div class="col-md-12 col-sm-12 col-xs-12">
+      <span>BakedSDF</span>
+        <div class="embed-responsive embed-responsive-21by9" style="margin-top: 0px;">
+          <video controls loop muted autoplay class="embed-responsive-item">
+            <source src="gfx/baselines/bakedsdf.mp4" type="video/mp4">
+          </video>
+        </div>
+        <span>RefNeRF</span>
+        <div class="embed-responsive embed-responsive-21by9" style="margin-top: 0px;">
+          <video controls loop muted autoplay class="embed-responsive-item">
+            <source src="gfx/baselines/refnerf.mp4" type="video/mp4">
+          </video>
+        </div>
+        <span>Neuralangelo</span>
+        <div class="embed-responsive embed-responsive-21by9" style="margin-top: 0px;">
+          <video controls loop muted autoplay class="embed-responsive-item">
+            <source src="gfx/baselines/neuralangelo.mp4" type="video/mp4">
+          </video>
+        </div>
+        <span>Ours</span>
+        <div class="embed-responsive embed-responsive-21by9" style="margin-top: 0px;">
+          <video controls loop muted autoplay class="embed-responsive-item">
+            <source src="gfx/ours/gardenspheres.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <h2>Additional Results of our Method on RefNeRF Real Dataset</h2>
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="embed-responsive embed-responsive-21by9">
+          <video controls loop muted autoplay class="embed-responsive-item">
+            <source src="gfx/ours/toycar.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="embed-responsive embed-responsive-21by9">
+          <video controls loop muted autoplay class="embed-responsive-item">
+            <source src="gfx/ours/sedan.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <h2>Additional Results of our Method on Mip-NeRF360 Dataset</h2>
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="embed-responsive embed-responsive-21by9">
+          <video controls loop muted autoplay class="embed-responsive-item">
+            <source src="gfx/ours/bicycle.mp4" type="video/mp4">
+          </video>
+        </div>
+        <br>
+      </div>
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="embed-responsive embed-responsive-21by9">
+          <video controls loop muted autoplay class="embed-responsive-item">
+            <source src="gfx/ours/stump.mp4" type="video/mp4">
+          </video>
+        </div>
+        <br>
+      </div>
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="embed-responsive embed-responsive-21by9">
+          <video controls loop muted autoplay class="embed-responsive-item">
+            <source src="gfx/ours/officebonsai.mp4" type="video/mp4">
+          </video>
+        </div>
+        <br>
+      </div>
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="embed-responsive embed-responsive-21by9">
+          <video controls loop muted autoplay class="embed-responsive-item">
+            <source src="gfx/ours/kitchenlego.mp4" type="video/mp4">
+          </video>
+        </div>
+        <br>
+      </div>
+    </div>
+  <div>
+    <h2 class="text-center" style="margin-top: 30px;">
+      Citation
+    </h2>
+    <p align="left">
+      If you want to cite our work, please use:
+    </p>
+    <pre align="left">
+      @InProceedings{wang2023unisdf,
+        author    = {Fangjinhua Wang and Marie-Julie Rakotosaona and Michael Niemeyer and Richard Szeliski and Marc Pollefeys and Federico Tombari},  
+        title     = {UniSDF: Unifying Neural Representations for High-Fidelity 3D Reconstruction of Complex Scenes with Reflections},
+        booktitle = {arXiv},
+        year      = {2023},
+      }
+  </pre>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
