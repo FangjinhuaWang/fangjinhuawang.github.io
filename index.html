@@ -20,10 +20,10 @@
               <p style="text-align:center">
                 <name>Fangjinhua Wang (王方锦华)</name>
               </p>
-              <p>I am a Ph.D. student in Computer Science at <a href="https://ethz.ch/en.html">ETH Zurich</a>, supervised by Prof. <a href="http://cvg.ethz.ch/people/faculty/">Marc Pollefeys</a>. 
+              <p>I am a final-year Ph.D. student in Computer Science at <a href="https://ethz.ch/en.html">ETH Zurich</a>, supervised by Prof. <a href="http://cvg.ethz.ch/people/faculty/">Marc Pollefeys</a>. 
               </p>
               <p>
-                Previously, I obtained a Master’s degree in Robotics at ETH zurich with distinction. I am the recipient of Chu Kochen Award (highest honor at Zhejiang University, 2017) and <a href="https://ethz.ch/content/dam/ethz/main/eth-zurich/education/auszeichnungen-preise/files/eth-medaille/medaille-master-arbeit-2021.pdf">ETH Medal</a> (ETH Zurich, 2021). 
+                Previously, I obtained a Master’s degree in Robotics at ETH zurich (with distinction) and a Bachelor's degree in Mechatronics Engineering at Zhejiang University (with distinction). I am the recipient of ETH Medal (ETH Zurich, 2021) and Chu Kochen Award (highest honor at Zhejiang University, 2017). 
               </p>
               <p style="text-align:center">
                 <a href="mailto:fangjinhua.wang@inf.ethz.ch">Email</a> &nbsp/&nbsp
@@ -42,19 +42,94 @@
             <td style="padding:20px;width:100%;vertical-align:middle">
               <heading>Research</heading>
               <p>
-                My current research interests mainly lie in the field of 3D vision, dense matching, reconstruction and deep learning. 
+                My current research interests mainly lie in efficient 3D perception algorithms for applications such as AR/VR/MR and robotics. Specifically, I mainly focus on deep learning-based methods on visual localization, 3D reconstruction and novel view synthesis. 
               </p>
             </td>
           </tr>
         </tbody></table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-				
+				  
+          <tr onmouseout="unisdf_stop()" onmouseover="unisdf_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='unisdf_image'>
+                  <img src='images/unisdf_after.png' width="180"></div>
+                <img src='images/unisdf_before.png' width="180">
+              </div>
+              <script type="text/javascript">
+                function unisdf_start() {
+                  document.getElementById('unisdf_image').style.opacity = "1";
+                }
+
+                function unisdf_stop() {
+                  document.getElementById('unisdf_image').style.opacity = "0";
+                }
+                unisdf_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://fangjinhuawang.github.io/UniSDF/">
+                <papertitle>UniSDF: Unifying Neural Representations for High-Fidelity 3D Reconstruction of Complex Scenes with Reflections</papertitle>
+              </a>
+              <br>
+              <strong>Fangjinhua Wang</strong>,
+              Marie-Julie Rakotosaona,
+              Michael Niemeyer,
+              Richard Szeliski,
+              Marc Pollefeys,
+              Federico Tombari
+              <br>
+              <em>arXiv</em>, 2023
+              <br>
+              <a href="https://arxiv.org/abs/2312.13285">Paper</a> /
+              <a href="https://fangjinhuawang.github.io/UniSDF/">Project Page</a>
+              <p></p>
+            </td>
+          </tr>   
+
+          <tr onmouseout="glace_stop()" onmouseover="glace_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='glace_image'>
+                  <img src='images/glace_after.png' width="180"></div>
+                <img src='images/glace_before.png' width="160">
+              </div>
+              <script type="text/javascript">
+                function glace_start() {
+                  document.getElementById('glace_image').style.opacity = "1";
+                }
+
+                function glace_stop() {
+                  document.getElementById('glace_image').style.opacity = "0";
+                }
+                glace_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+                <papertitle>GLACE: Global Local Accelerated Coordinate Encoding</papertitle>
+              <br>
+              <strong>Fangjinhua Wang*</strong>,
+              Xudong Jiang*,
+              Silvano Galliani, 
+              Christoph Vogel, 
+              Marc Pollefeys
+              (* denotes equal contribution)
+              <br>
+              <em>CVPR</em>, 2024
+              <br>
+              Paper /
+              Project Page (Coming Soon) /
+              Code (Coming Soon)
+              <p></p>
+            </td>
+          </tr>   
+
 		      <tr onmouseout="volrecon_stop()" onmouseover="volrecon_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
                 <div class="two" id='volrecon_image'>
-                  <img src='images/volrecon_after.jpg' width="160"></div>
-                <img src='images/volrecon_before.jpg' width="160">
+                  <img src='images/volrecon_after.jpg' width="180"></div>
+                <img src='images/volrecon_before.jpg' width="180">
               </div>
               <script type="text/javascript">
                 function volrecon_start() {
@@ -129,8 +204,8 @@
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
                 <div class="two" id='patchmatchnet_image'>
-                  <img src='images/patchmatchnet_after.jpg' width="160"></div>
-                <img src='images/patchmatchnet_before.jpg' width="160">
+                  <img src='images/patchmatchnet_after.jpg' width="180"></div>
+                <img src='images/patchmatchnet_before.jpg' width="180">
               </div>
               <script type="text/javascript">
                 function patchmatchnet_start() {
@@ -167,8 +242,8 @@
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
                 <div class="two" id='multisensorwearable_image'>
-                  <img src='images/multisensorwearable_after.jpg' width="160"></div>
-                <img src='images/multisensorwearable_before.jpg' width="160">
+                  <img src='images/multisensorwearable_after.jpg' width="180"></div>
+                <img src='images/multisensorwearable_before.jpg' width="180">
               </div>
               <script type="text/javascript">
                 function multisensorwearable_start() {
@@ -203,7 +278,25 @@
 
         </tbody></table>
 
-				
+				<table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
+          <tr>
+            <td>
+              <heading>Teaching experience</heading>
+            </td>
+          </tr>
+        </tbody></table>
+        <table width="100%" align="center" border="0" cellpadding="20"><tbody>
+          
+          <tr>
+            <td width="75%" valign="center">
+              <strong>Computer Vision</strong>, ETH Zurich, Autumn 2021, Autumn 2022, Autumn 2023
+              <br>
+              <strong>3D Vision</strong>, ETH Zurich, Spring 2023, Spring 2024
+              <br>
+              <strong>Introduction to Machine Learning</strong>, ETH Zurich, Spring 2021
+            </td>
+          </tr>
+
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
           <tr>
             <td>
@@ -215,9 +308,11 @@
 					
           <tr>
             <td width="75%" valign="center">
-              Meta Reality Labs (Redmond, US), 2022
+              <strong>Google</strong> (Zurich, Switzerland), 2023
               <br>
-              Microsoft Mixed Reality & AI Zurich Lab (Zurich, Switzerland), 2020
+              <strong>Meta Reality Labs</strong> (Redmond, US), 2022
+              <br>
+              <strong>Microsoft Mixed Reality & AI Zurich Lab</strong> (Zurich, Switzerland), 2020
             </td>
           </tr>
           
@@ -234,13 +329,13 @@
           
           <tr>
             <td width="75%" valign="center">
-              <strong>Journal reviewer</strong>: TVCG, CAG, Neural Computing, TCSVT, TIP
+              <strong>Journal reviewer</strong>: T-PAMI, TIP, TVCG, RA-L, TCSVT, CAG, Neural Computing
               <br>
-              <strong>Conference reviewer</strong>: ECCV2022, ICRA2023, CVPR2023
+              <strong>Conference reviewer</strong>: CVPR, ICCV, ECCV, ICRA, NeurIPS
             </td>
           </tr>
-          
         </tbody></table>
+
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr>
             <td style="padding:0px">
