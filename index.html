@@ -48,7 +48,10 @@
             <td style="padding:20px;width:100%;vertical-align:middle">
               <heading>Research</heading>
               <p>
-                My current research interests mainly lie in efficient 3D perception algorithms for applications such as AR/VR/MR and robotics. Specifically, I mainly focus on deep learning-based methods on visual localization, 3D reconstruction and novel view synthesis. Recently, I am also working on downstream tasks such as scene understanding, which is important for robotics. 
+                My research interest lies in building the digital twin of real world with deep-learning-based 3D reconstruction, including structure-from-motion, surface reconstruction and novel view synthesis. Especially, I am interested in efficient algorithms that are computation-friendly for applications such as AR/VR/MR and robotics. Additionally, I am also interested in accurate reconstruction under challenging settings, including non-Lambertian surfaces, dynamics and sparse inputs. 
+              </p>
+              <p>
+                Currently, I am interested in using reconstruction in other tasks, such as open vocabulary scene understanding and robotics. 
               </p>
             </td>
           </tr>
@@ -66,6 +69,49 @@
         </tbody></table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 				  
+          <tr onmouseout="depthsplat_stop()" onmouseover="depthsplat_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='depthsplat_image'>
+                  <video width="120%" muted="" autoplay="" loop="">
+                    <source src="images/depthsplat.mp4" type="video/mp4">
+                  </video>
+                  </div>
+                <img src='images/depthsplat.jpg' width="120%">
+              </div>
+              <script type="text/javascript">
+                function depthsplat_start() {
+                  document.getElementById('depthsplat_image').style.opacity = "1";
+                }
+
+                function depthsplat_stop() {
+                  document.getElementById('depthsplat_image').style.opacity = "0";
+                }
+                depthsplat_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="">
+                <papertitle>DepthSplat: Connecting Gaussian Splatting and Depth</papertitle>
+              </a>
+              <br>
+              Haofei Xu,
+              Songyou Peng,
+              <strong>Fangjinhua Wang</strong>,
+              Hermann Blum,
+              Daniel Barath,
+              Andreas Geiger,
+              Marc Pollefeys
+              <br>
+              <em>In arXiv. Under review</em>
+              <br>
+              <a href="https://arxiv.org/abs/2410.13862">Paper</a> /
+              <a href="https://haofeixu.github.io/depthsplat/">Project Page</a> /
+              <a href="https://github.com/cvg/depthsplat">Code</a>
+              <p></p>
+            </td>
+          </tr>
+
           <tr onmouseout="mvs_survey_stop()" onmouseover="mvs_survey_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
@@ -98,7 +144,7 @@
               Richard Hartley, 
               Marc Pollefeys
               <br>
-              <em>Under review</em>
+              <em>In arXiv. Under review</em>
               <br>
               <a href="https://arxiv.org/pdf/2408.15235">Paper</a>
               <p></p>
@@ -163,13 +209,13 @@
               </script>
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
-              <a href="">
+              <a href="https://lxxue.github.io/human-scene-recon/">
                 <papertitle>HSR: Holistic 3D Human-Scene Reconstruction from Monocular Videos</papertitle>
               </a>
               <br>
               Lixin Xue, 
               Chen Guo, 
-              Chengwei Zheng
+              Chengwei Zheng,
               <strong>Fangjinhua Wang</strong>,
               Tianjian Jiang,
               Hsuan-I Ho, 
@@ -179,9 +225,9 @@
               <br>
               <em>ECCV</em>, 2024
               <br>
-              <a href="">Paper</a> /
-              <a href="">Project Page</a> /
-              <a href="">Code</a>
+              <a href="https://files.ait.ethz.ch/projects/hsr/hsr_paper_main.pdf">Paper</a> /
+              <a href="https://lxxue.github.io/human-scene-recon/">Project Page</a> /
+              <a href="https://lxxue.github.io/human-scene-recon/">Code</a>
               <p></p>
             </td>
           </tr>   
