@@ -98,6 +98,42 @@
         </tbody></table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 				  
+          <tr onmouseout="diffmvs_stop()" onmouseover="diffmvs_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='diffmvs_image'>
+                  <img src='images/diffmvs_after.png' width="170"></div>
+                <img src='images/diffmvs_before.png' width="170">
+              </div>
+              <script type="text/javascript">
+                function diffmvs_start() {
+                  document.getElementById('diffmvs_image').style.opacity = "1";
+                }
+
+                function diffmvs_stop() {
+                  document.getElementById('diffmvs_image').style.opacity = "0";
+                }
+                diffmvs_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://ieeexplore.ieee.org/abstract/document/11120351">
+                <papertitle>Lightweight and Accurate Multi-View Stereo With Confidence-Aware Diffusion Model</papertitle>
+              </a>
+              <br>
+              <strong>Fangjinhua Wang*</strong>,
+              Qingshan Xu*,
+              Yew-Soon Ong&#10013,
+              Marc Pollefeys&#10013
+              <br>
+              <em>T-PAMI</em>, 2025
+              <br>
+              <a href="https://ieeexplore.ieee.org/abstract/document/11120351">Paper</a> /
+              <a href="https://github.com/cvg/diffmvs">Code</a>
+              <p></p>
+            </td>
+          </tr>   
+
           <tr onmouseout="openfungraph_stop()" onmouseover="openfungraph_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
