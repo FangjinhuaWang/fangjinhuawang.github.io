@@ -53,6 +53,9 @@
             <tr>
             <td style="padding:20px;width:100%;vertical-align:middle">
               <heading>News</heading>
+			  <p>
+                2026.01: Our survey on 3D Reconstruction is accepted to T-PAMI.
+              </p>
               <p>
                 2025.07: DiffMVS is accepted to T-PAMI (my first T-PAMI paper)!
               </p>
@@ -63,7 +66,7 @@
                 2025.04: I am selected to participate in the Doctoral Consortium at CVPR 2025!
               </p>
               <p>
-                2025.04: 3 papers are accepted to CVPR2025 (2 posters + 1 highlight)!
+                2025.04: 3 papers are accepted to CVPR2025 (2 posters + 1 highlight).
               </p>
             </td>
           </tr>
@@ -97,7 +100,46 @@
           </tr>
         </tbody></table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-				  
+
+	      <tr onmouseout="mvs_survey_stop()" onmouseover="mvs_survey_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='mvs_survey_image'>
+                  <img src='images/mvs_survey_after.png' width="180"></div>
+                <img src='images/mvs_survey_before.png' width="180">
+              </div>
+              <script type="text/javascript">
+                function mvs_survey_start() {
+                  document.getElementById('mvs_survey_image').style.opacity = "1";
+                }
+
+                function mvs_survey_stop() {
+                  document.getElementById('mvs_survey_image').style.opacity = "0";
+                }
+                mvs_survey_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://arxiv.org/pdf/2408.15235">
+                <papertitle>Learning-based Multi-View Stereo: A Survey</papertitle>
+              </a>
+              <br>
+              <strong>Fangjinhua Wang*</strong> (Project Lead),
+              Qingtian Zhu*, 
+              Di Chang*, 
+              Quankai Gao, 
+              Junlin Han, 
+              Tong Zhang, 
+              Richard Hartley, 
+              Marc Pollefeys&#10013
+              <br>
+              <em>T-PAMI</em>, 2026
+              <br>
+              <a href="https://arxiv.org/pdf/2408.15235">Paper</a>
+              <p></p>
+            </td>
+          </tr> 
+
           <tr onmouseout="diffmvs_stop()" onmouseover="diffmvs_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
@@ -255,44 +297,7 @@
             </td>
           </tr>
 
-          <tr onmouseout="mvs_survey_stop()" onmouseover="mvs_survey_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <div class="one">
-                <div class="two" id='mvs_survey_image'>
-                  <img src='images/mvs_survey_after.png' width="180"></div>
-                <img src='images/mvs_survey_before.png' width="180">
-              </div>
-              <script type="text/javascript">
-                function mvs_survey_start() {
-                  document.getElementById('mvs_survey_image').style.opacity = "1";
-                }
-
-                function mvs_survey_stop() {
-                  document.getElementById('mvs_survey_image').style.opacity = "0";
-                }
-                mvs_survey_stop()
-              </script>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              <a href="https://arxiv.org/pdf/2408.15235">
-                <papertitle>Learning-based Multi-View Stereo: A Survey</papertitle>
-              </a>
-              <br>
-              <strong>Fangjinhua Wang*</strong> (Project Lead),
-              Qingtian Zhu*, 
-              Di Chang*, 
-              Quankai Gao, 
-              Junlin Han, 
-              Tong Zhang, 
-              Richard Hartley, 
-              Marc Pollefeys&#10013
-              <br>
-              <em>In arXiv. Under review</em>
-              <br>
-              <a href="https://arxiv.org/pdf/2408.15235">Paper</a>
-              <p></p>
-            </td>
-          </tr>   
+            
 
           <tr onmouseout="unisdf_stop()" onmouseover="unisdf_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
