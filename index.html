@@ -20,22 +20,11 @@
               <p style="text-align:center">
                 <name>Fangjinhua Wang (王方锦华)</name>
               </p>
-              <p>I am a Postdoctoral researcher at <a href="https://ethz.ch/en.html">ETH Zurich</a>, working with Prof. <a href="https://cvg.ethz.ch/team/Prof-Dr-Marc-Pollefeys">Marc Pollefeys</a>. I obtained a PhD in Computer Science at ETH Zurich, supervised by Prof. Marc Pollefeys. 
+              <p>I am a researcher in Embodied AI and Spatial Intelligence. Previously, I was a Postdoctoral researcher at <a href="https://ethz.ch/en.html">ETH Zurich</a>, working with Prof. <a href="https://cvg.ethz.ch/team/Prof-Dr-Marc-Pollefeys">Marc Pollefeys</a>. I obtained a PhD in Computer Science at ETH Zurich, supervised by Prof. Marc Pollefeys. 
               
-              Previously, I obtained a Master's degree in Robotics at ETH zurich (with distinction) and a Bachelor's degree in Mechatronics Engineering at Zhejiang University (with distinction). I am the recipient of ETH Medal (ETH Zurich, 2021) and Chu Kochen Award (highest honor at Zhejiang University, 2017). 
+              Previously, I obtained a Master's degree in Robotics at ETH zurich (with distinction) and a Bachelor's degree in Mechatronics Engineering at Zhejiang University (with distinction). I am the recipient of CVPR Doctoral Consortium Award, ETH Medal (ETH Zurich, 2021), and Chu Kochen Award (highest honor at Zhejiang University, 2017). 
               </p>
 
-              <p>
-                I am open to research collaboration. Feel free to contact me via email if you are interested in 3D vision and robotics. 
-              </p>
-              <p>
-
-              </p>
-              <p>
-                <font color="red"><strong>
-                  I am on the job market. 
-                </strong></font>
-              </p>
               <p style="text-align:center">
                 <a href="mailto:fangjinhua.wang@inf.ethz.ch">Email</a> &nbsp/&nbsp
                 <a href="https://scholar.google.com/citations?user=ysTmrEsAAAAJ">Google Scholar</a> &nbsp/&nbsp
@@ -53,7 +42,10 @@
             <tr>
             <td style="padding:20px;width:100%;vertical-align:middle">
               <heading>News</heading>
-			  <p>
+              <p>
+                2026.03: 2 papers are accepted to CVPR2026.
+              </p>
+			        <p>
                 2026.01: Our survey on 3D Reconstruction is accepted to T-PAMI.
               </p>
               <p>
@@ -78,12 +70,7 @@
               <heading>Research Overview</heading>
               <p>
                 My research is motivated by the goal of enabling embodied agents to perceive, understand and interact with the physical world as humans. During my PhD, I have been focusing on neural representations of the real world, including perception of spatial positioning information (visual localization), geometry (3D reconstruction), appearance (neural rendering), and semantics (open-vocabulary scene understanding). 
-              </p>
-              <p>
                 On the one hand, I focus on efficient algorithms that are computation-friendly for AR/VR/MR/robotics in general settings. On the other hand, I am interested in accurate representations for challenging settings in the real-world, such as large-scale scenes, non-Lambertian surfaces, dynamics, and sparse inputs. 
-              </p>
-              <p>
-                Currently, I am interested in using generative models to generate unlimited data for various downstream applications. 
               </p>
             </td>
           </tr>
@@ -101,6 +88,174 @@
         </tbody></table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
+          <tr onmouseout="ego_video_stop()" onmouseover="ego_video_start()">
+          <td style="padding:20px;width:25%;vertical-align:middle">
+            <div class="one">
+              <div class="two" id='ego_video_image'>
+                <img src='images/ego_video_after.png' width="180"></div>
+              <img src='images/ego_video_before.png' width="180">
+            </div>
+            <script type="text/javascript">
+              function ego_video_start() {
+                document.getElementById('ego_video_image').style.opacity = "1";
+              }
+
+              function ego_video_stop() {
+                document.getElementById('ego_video_image').style.opacity = "0";
+              }
+              ego_video_stop()
+            </script>
+          </td>
+          <td style="padding:20px;width:75%;vertical-align:middle">
+            <a href="https://arxiv.org/pdf/2603.11755">
+              <papertitle>Controllable Egocentric Video Generation via Occlusion-Aware Sparse 3D Hand Joints</papertitle>
+            </a>
+            <br>
+            Chenyangguang Zhang, Botao Ye, Boqi Chen, Alexandros Delitzas, <strong>Fangjinhua Wang</strong>, Marc Pollefeys, Xi Wang
+            <br>
+            <em>arXiv</em>, 2026
+            <br>
+            <a href="https://arxiv.org/pdf/2603.11755">Paper</a>
+            <p></p>
+          </td>
+        </tr>
+
+        <tr onmouseout="flow_stop()" onmouseover="flow_start()">
+          <td style="padding:20px;width:25%;vertical-align:middle">
+            <div class="one">
+              <div class="two" id='flow_image'>
+                <img src='images/flow_after.png' width="180"></div>
+              <video width="100%" muted="" autoplay="" loop="">
+                    <source src="images/flow_before.mp4" type="video/mp4">
+              </video>
+            </div>
+            <script type="text/javascript">
+              function flow_start() {
+                document.getElementById('flow_image').style.opacity = "1";
+              }
+
+              function flow_stop() {
+                document.getElementById('flow_image').style.opacity = "0";
+              }
+              flow_stop()
+            </script>
+          </td>
+          <td style="padding:20px;width:75%;vertical-align:middle">
+            <a href="https://arxiv.org/pdf/2603.25739">
+              <papertitle>MegaFlow: Zero-Shot Large Displacement Optical Flow</papertitle>
+            </a>
+            <br>
+            Dingxi Zhang, <strong>Fangjinhua Wang</strong>, Marc Pollefeys, Haofei Xu 
+            <br>
+            <em>arXiv</em>, 2026
+            <br>
+            <a href="https://arxiv.org/pdf/2603.25739">Paper</a> /
+            <a href="https://kristen-z.github.io/projects/megaflow/">Project Page</a> /
+            <a href="https://github.com/cvg/megaflow">Code</a>
+            <p></p>
+          </td>
+        </tr>
+
+        <tr onmouseout="imloc_stop()" onmouseover="imloc_start()">
+          <td style="padding:20px;width:25%;vertical-align:middle">
+            <div class="one">
+              <div class="two" id='imloc_image'>
+                <img src='images/imloc_after.png' width="180"></div>
+              <img src='images/imloc_before.png' width="180">
+            </div>
+            <script type="text/javascript">
+              function imloc_start() {
+                document.getElementById('imloc_image').style.opacity = "1";
+              }
+
+              function imloc_stop() {
+                document.getElementById('imloc_image').style.opacity = "0";
+              }
+              imloc_stop()
+            </script>
+          </td>
+          <td style="padding:20px;width:75%;vertical-align:middle">
+            <a href="https://arxiv.org/pdf/2601.04185">
+              <papertitle>ImLoc: Revisiting Visual Localization with Image-based Representation</papertitle>
+            </a>
+            <br>
+            Xudong Jiang, <strong>Fangjinhua Wang</strong>&#10013, Silvano Galliani, Christoph Vogel, Marc Pollefeys 
+            <br>
+            <em>arXiv</em>, 2026
+            <br>
+            <a href="https://arxiv.org/pdf/2601.04185">Paper</a> /
+            <a href="https://github.com/cvg/Hierarchical-Localization">Code (Coming Soon)</a>
+            <p></p>
+          </td>
+        </tr> 
+
+        <tr onmouseout="osi_stop()" onmouseover="osi_start()">
+          <td style="padding:20px;width:25%;vertical-align:middle">
+            <div class="one">
+              <div class="two" id='osi_image'>
+                <img src='images/osi_after.png' width="180"></div>
+              <img src='images/osi_before.png' width="180">
+            </div>
+            <script type="text/javascript">
+              function osi_start() {
+                document.getElementById('osi_image').style.opacity = "1";
+              }
+
+              function osi_stop() {
+                document.getElementById('osi_image').style.opacity = "0";
+              }
+              osi_stop()
+            </script>
+          </td>
+          <td style="padding:20px;width:75%;vertical-align:middle">
+            <a href="https://arxiv.org/abs/2512.19683">
+              <papertitle>From Indoor to Open World: Revealing the Spatial Reasoning Gap in MLLMs</papertitle>
+            </a>
+            <br>
+            Mingrui Wu, Zhaozhi Wang, <strong>Fangjinhua Wang</strong>, Jiaolong Yang, Marc Pollefeys, Tong Zhang&#10013 
+            <br>
+            <em>CVPR</em>, 2026
+            <br>
+            <a href="https://arxiv.org/abs/2512.19683">Paper</a> /
+            <a href="https://mingrui-wu.github.io/openbench/">Project Page</a> /
+            <a href="https://github.com/mingrui-wu/OSI-Bench">Code</a> /
+            <a href="https://huggingface.co/datasets/HarmlessSR07/OSI-Bench">Dataset</a>
+            <p></p>
+          </td>
+        </tr> 
+
+        <tr onmouseout="rho_stop()" onmouseover="rho_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='rho_image'>
+                  <img src='images/rho_after.png' width="180"></div>
+                <img src='images/rho_before.png' width="180">
+              </div>
+              <script type="text/javascript">
+                function rho_start() {
+                  document.getElementById('rho_image').style.opacity = "1";
+                }
+
+                function rho_stop() {
+                  document.getElementById('rho_image').style.opacity = "0";
+                }
+                rho_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="">
+                <papertitle>RHO: Robust Holistic OSM-Based Metric Cross-View Geo-Localization</papertitle>
+              </a>
+              <br>
+              Junwei Zheng, Ruize Dai, Ruiping Liu, Zichao Zeng, Yufan Chen, <strong>Fangjinhua Wang</strong>, Kunyu Peng, Kailun Yang, Jiaming Zhang, Rainer Stiefelhagen
+              <br>
+              <em>CVPR</em>, 2026
+              <br>
+              <a href="">Paper</a>
+              <p></p>
+            </td>
+          </tr> 
+        
 	      <tr onmouseout="mvs_survey_stop()" onmouseover="mvs_survey_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
@@ -637,6 +792,13 @@
                 <ul>
                     <li> Master thesis: <a href="https://openfungraph.github.io/">OpenFunGraph</a> (CVPR'25)
                   <li> &#8594; PhD student at ETH Zurich, advised by Marc Pollefeys
+                </ul>
+              <br>
+
+              <strong>Dingxi Zhang</strong> (2025): Msc student at ETH Zurich (together with Haofei Xu)<br>
+                <ul>
+                    <li> Semester project: <a href="https://kristen-z.github.io/projects/megaflow/">MegaFlow</a>
+                  <li> &#8594; PhD student at ETH CLS, advised by Marc Pollefeys
                 </ul>
               <br>
             
